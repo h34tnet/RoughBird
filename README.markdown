@@ -25,7 +25,7 @@ web.py and sinatra), just a bit less *micro*.
             ->setApp('../myapp')
 
             // Dispatch the request.
-            ->dispatch($_REQUEST['url']);
+            ->dispatch(!empty($_REQUEST['url']) ? $_REQUEST['url'] : '');
     ?>
 
 ### {$appDirectory}/init.php
